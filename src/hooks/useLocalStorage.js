@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useLocalStorage = (key, initialValue) => {
+const useLocalStorage = (key, initialValue) => {
   if (typeof key !== "string")
     throw new Error("Error: useLocalStorage(key, value)");
 
@@ -18,3 +18,5 @@ export const useLocalStorage = (key, initialValue) => {
 
   return [storedValue, setValue];
 };
+
+export default useLocalStorage;
